@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GamesSalesStore.PurchasePage">
+    <ContentPage.Content>
+        <Grid Padding="50,0,50,0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="150"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="1" Grid.ColumnSpan="3" Text="Order your game" HorizontalTextAlignment="Center" FontSize="40" FontAttributes="Bold" Padding="0,20"/>
+            <Label Grid.Row="2" Grid.Column="0" Text="Fist Name" Padding="10,0,0,0"/>
+            <Entry Keyboard="Text" Grid.Row="3" x:Name="entryFirstName" Grid.Column="0" Placeholder="Ex: Michael"></Entry>
+            <Label Grid.Row="2" Grid.Column="2" Text="Last Name"/>
+            <Entry Keyboard="Text" Grid.Row="3" x:Name="entryLastName" Grid.Column="2" Placeholder="Ex: Jordan"/>
+            <Label Grid.Row="5" Grid.Column="0" Text="Street" Padding="10,0,0,0"/>
+            <Entry Keyboard="Text" Grid.Row="6" x:Name="entryStreet" Grid.Column="0" Placeholder="Ex: Street King St 41325 " Grid.ColumnSpan="3"/>
+            <Label Grid.Row="8" Grid.Column="0" Text="Country" Padding="10,0,0,0"/>
+            <Entry Keyboard="Text" Grid.Row="9" x:Name="entryCountry" Grid.Column="0" Placeholder="Ex: Romania"></Entry>
+            <Label Grid.Row="8" Grid.Column="2" Text="State"/>
+            <Entry Keyboard="Text" Grid.Row="9" x:Name="entryState" Grid.Column="2" Placeholder="Ex: Bucuresti"/>
+            <Picker x:Name="pickerGame" Grid.Row="11" Grid.Column="0"  Grid.ColumnSpan="3" Title="Chose your game"/>
+            <Button Grid.Row="13" Grid.Column="0" Grid.ColumnSpan="3" HeightRequest="60" Text="Add Order" CornerRadius="20" BackgroundColor="#2196F3" Clicked="AddOrder_Clicked"/>
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

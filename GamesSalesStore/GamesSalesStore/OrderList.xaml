@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GamesSalesStore.OrderList">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Orders List" FontSize="Title" Padding="16"/>
+
+            <ListView x:Name="listViewOrders">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="10">
+                                <Label Text="{Binding IdPurchase,StringFormat=' {0} : '}" VerticalOptions="Center"/>
+                                <Label Text="{Binding FirstName,StringFormat='  FirstName: {0} '}" VerticalOptions="Center"/>
+                                <Label Text="{Binding LastName,StringFormat='  LastName: {0}'}" VerticalOptions="Center"/>
+                                <Label Text="{Binding GameTitle,StringFormat='  GameTitle: {0}'}" VerticalOptions="Center"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

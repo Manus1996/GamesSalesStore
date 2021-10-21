@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:markupextensions="clr-namespace:GamesSalesStore"
+             x:Class="GamesSalesStore.GamesList">
+    <ContentPage.Content>
+
+        <StackLayout>
+            <Label Text="Welcome to GameDeals!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <StackLayout>
+                <SearchBar Placeholder="Search..." TextChanged="SearchBar_TextChanged"></SearchBar>
+                <Button Text="Refresh" Clicked="Button_Clicked" BackgroundColor="OrangeRed" TextColor="White" CornerRadius="15" Margin="150,10" Padding="10"></Button>
+                <ListView x:Name="games" HasUnevenRows="True"
+                      ItemTapped="games_ItemTapped"
+                      IsPullToRefreshEnabled="True"
+                      Refreshing="games_Refreshing">
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" Padding="5">
+                                    <Image Source="{Binding Thumb}"></Image>
+                                    <StackLayout HorizontalOptions="StartAndExpand">
+                                        <Label Text="{Binding Title}"></Label>
+                                        <StackLayout Orientation="Horizontal">
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label Text="$"></Label>
+                                                <Label Text="{Binding NormalPrice}" TextDecorations="Strikethrough"></Label>
+                                            </StackLayout>
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label Text="$"></Label>
+                                                <Label Text="{Binding SalePrice}"></Label>
+                                            </StackLayout>
+
+                                        </StackLayout>
+
+                                    </StackLayout>
+                                    <Button Text="Buy" BackgroundColor="Black" TextColor="White" CornerRadius="10" Clicked="Buy_Clicked" Margin="10"></Button>
+                                </StackLayout>
+                            </ViewCell>
+                        
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
