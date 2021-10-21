@@ -60,7 +60,9 @@ namespace GamesSalesStore
             };
             db.Insert(purchase);
             await DisplayAlert(null, "Comanda cu ID-ul: " + purchase.IdPurchase + " a fost adaugata", "Ok");
-            await Navigation.PopAsync();
+
+            var PurchaseList = db.Table<Purchase>().OrderBy(x => x.IdPurchase).ToList();
+            await Navigation.PushAsync(new OrderList(PurchaseList));
         }
     }
 }

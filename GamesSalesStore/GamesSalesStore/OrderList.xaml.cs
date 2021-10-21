@@ -16,8 +16,14 @@ namespace GamesSalesStore
     public partial class OrderList : ContentPage
     {
         string _dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "games_sales_store.db");
+        public List<Purchase> PurchaseList { get; set; }
         public OrderList()
         {
+            InitializeComponent();
+        }
+        public OrderList(List<Purchase> purchaseList)
+        {
+            PurchaseList = purchaseList;
             InitializeComponent();
         }
 
@@ -25,8 +31,8 @@ namespace GamesSalesStore
         {
             base.OnAppearing();
             var db = new SQLiteConnection(_dbPath);
-
-            listViewOrders.ItemsSource = db.Table<Purchase>().OrderBy(x => x.IdPurchase).ToList();
+            PurchaseList = db.Table<Purchase>().OrderBy(x => x.IdPurchase).ToList();
+            BindingContext = this;
         }
     }
 }

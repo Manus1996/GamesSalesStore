@@ -6,20 +6,23 @@
         <StackLayout>
             <Label Text="Orders List" FontSize="Title" Padding="16"/>
 
-            <ListView x:Name="listViewOrders">
-                <ListView.ItemTemplate>
+            <CollectionView ItemsSource="{Binding PurchaseList}">
+                <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <ViewCell>
-                            <StackLayout Orientation="Horizontal" Padding="10">
-                                <Label Text="{Binding IdPurchase,StringFormat=' {0} : '}" VerticalOptions="Center"/>
-                                <Label Text="{Binding FirstName,StringFormat='  FirstName: {0} '}" VerticalOptions="Center"/>
-                                <Label Text="{Binding LastName,StringFormat='  LastName: {0}'}" VerticalOptions="Center"/>
-                                <Label Text="{Binding GameTitle,StringFormat='  GameTitle: {0}'}" VerticalOptions="Center"/>
-                            </StackLayout>
-                        </ViewCell>
+                        <Grid Padding="10" RowDefinitions="Auto, *" ColumnDefinitions="Auto, *">
+                            <Label Grid.Column="1"
+                               Text="{Binding FirstName,StringFormat='First: {0}'}"
+                               FontAttributes="Bold" />
+                            <Label Grid.Column="2"
+                               Text="{Binding LastName,StringFormat='Last: {0}'}"
+                               FontAttributes="Bold" />
+                            <Label Grid.Column="3"
+                               Text="{Binding GameTitle,StringFormat='Game: {0}'}"
+                               VerticalOptions="End" /> 
+                        </Grid>
                     </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
