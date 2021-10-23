@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.UI.ViewManagement;
 
 namespace GamesSalesStore.UWP
 {
@@ -20,6 +21,7 @@ namespace GamesSalesStore.UWP
         public MainPage()
         {
             this.InitializeComponent();
+
 
             LoadApplication(new GamesSalesStore.App());
         }

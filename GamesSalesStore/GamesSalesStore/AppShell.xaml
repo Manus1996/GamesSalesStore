@@ -10,6 +10,12 @@
         </ShellContent>
     </FlyoutItem>
 
+    <FlyoutItem Title="Games">
+        <ShellContent>
+            <local:GamesList/>
+        </ShellContent>
+    </FlyoutItem>
+
     <FlyoutItem Title="Purchase">
         <ShellContent>
             <local:PurchasePage/>
@@ -22,9 +28,9 @@
         </ShellContent>
     </FlyoutItem>
 
-    <FlyoutItem Title="Games">
+    <FlyoutItem Title="FAQ">
         <ShellContent>
-            <local:GamesList/>
+            <local:FAQ/>
         </ShellContent>
     </FlyoutItem>
 </Shell>

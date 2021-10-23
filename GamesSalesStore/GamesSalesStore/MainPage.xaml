@@ -1,24 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:GamesSalesStore.MarkupExtensions"
              x:Class="GamesSalesStore.MainPage">
 
-    <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
+    <StackLayout BackgroundColor="#92c4ea">
+        
+        
+        <Image x:Name="gameStoreImage" Aspect="AspectFill"></Image>
+
+        <Label Text="Welcome to GameDeals!" HorizontalTextAlignment="Start" Padding="24, 0, 0, 0" FontSize="36"/>
+    
+
+        <Label Text="Start shopping now!" FontSize="Title" Padding="30,10,30,10"/>
+        <Label Text="Browse our catalogue, we have hundreds of games at imbattable prices !" FontSize="16" Padding="30,0,30,0"/>
+        <Button Text="Go to GameStore" Clicked="GameStore_Clicked" CornerRadius="15" Margin="150,10" Padding="10" BackgroundColor="Black" TextColor="White"></Button>
+
+        <Image Source="{local:EmbeddedImage ResourceId=GameSalesStore.Images.gaming-wallpaper.jpg}" x:Name="gamingBackground" Aspect="AspectFill"></Image>
     </StackLayout>
+    
 
 </ContentPage>

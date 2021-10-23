@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GamesSalesStore.FAQ">
+    <ContentPage.Content>
+        <StackLayout Padding="0,24,24,24">
+            <Label Text="Frequently Asked Questions" 
+                FontSize="Title"
+                HorizontalTextAlignment="Center"/>
+            <Label Text="How can I buy a game?" FontSize="Subtitle" Padding="24,24,0,0"></Label>
+            <Label Text="It is very simple. Just click on the 'Go to GameStore' button on the main page, or on the 'Games' item in the Navigation menu." Padding="30, 0 , 0, 30"></Label>
+            <Label Text="How can I see my orders?" FontSize="Subtitle" Padding="24,24,0,0"></Label>
+            <Label Text="Go to 'Order List' in the Navigation menu. There will be posted (if any) all your orders, ordered by date." Padding="30, 0 , 0, 30"></Label>
+            <Image x:Name="faqImage"></Image>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
