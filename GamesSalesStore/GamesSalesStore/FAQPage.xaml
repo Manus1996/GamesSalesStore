@@ -3,15 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GamesSalesStore.FAQ">
     <ContentPage.Content>
-        <StackLayout Padding="0,24,24,24">
-            <Label Text="Frequently Asked Questions" 
+        <ScrollView>
+            <StackLayout Padding="0,24,24,24">
+                <Label Text="Frequently Asked Questions" 
                 FontSize="Title"
                 HorizontalTextAlignment="Center"/>
-            <Label Text="How can I buy a game?" FontSize="Subtitle" Padding="24,24,0,0"></Label>
-            <Label Text="It is very simple. Just click on the 'Go to GameStore' button on the main page, or on the 'Games' item in the Navigation menu." Padding="30, 0 , 0, 30"></Label>
-            <Label Text="How can I see my orders?" FontSize="Subtitle" Padding="24,24,0,0"></Label>
-            <Label Text="Go to 'Order List' in the Navigation menu. There will be posted (if any) all your orders, ordered by date." Padding="30, 0 , 0, 30"></Label>
-            <Image x:Name="faqImage"></Image>
-        </StackLayout>
+            
+                <Label Text="How can I buy a game?" FontSize="Subtitle" Padding="24,24,0,0"></Label>
+                <Label Text="It is very simple. Just click on the 'Go to GameStore' button on the main page, or on the 'Games' item in the Navigation menu." Padding="30, 0 , 0, 30"></Label>
+                <Label Text="The games have too little details :(" FontSize="Subtitle" Padding="24,24,0,0"></Label>
+                <Label Text="Just tap on one game and a pop-up with more information like MetaCritic score, release date and may other useful info will appear." Padding="30, 0 , 0, 30"></Label>
+                <Label Text="How can I see my orders?" FontSize="Subtitle" Padding="24,24,0,0"></Label>
+                <Label Text="Go to 'Order List' in the Navigation menu. There will be posted (if any) all your orders, ordered by date." Padding="30, 0 , 0, 30"></Label>
+                <Label Text="I can't find the game that I want" FontSize="Subtitle" Padding="24,24,0,0"></Label>
+                <Label Text="Then you can use our 'search' feature that is located at the top of the 'Game Store' Page." Padding="30, 0 , 0, 30"></Label>
+                <Image x:Name="faqImage"></Image>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

@@ -4,7 +4,7 @@
        xmlns:local="clr-namespace:GamesSalesStore"
              x:Class="GamesSalesStore.AppShell">
 
-    <FlyoutItem Title="First Page">
+    <FlyoutItem Title="Welcome">
         <ShellContent>
             <local:MainPage/>
         </ShellContent>
